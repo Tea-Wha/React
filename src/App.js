@@ -5,14 +5,15 @@ import WelcomeProps from "./WelcomeProps";
 import Articles from "./Articles";
 import MyComponent from "./MyComponent";
 import BoxComponent from "./BoxComponent";
+import Counter from "./Component";
+import Say from "./Say";
+import Clock from "./Clock";
 // 정수, boolean 값은 항상 객체로 전달해야 함
 
 function App() {
   return (
     <>
-      <MyComponent name="안유진" age={21} />
-      <BoxComponent>첫 번째 박스 입니다.</BoxComponent>
-      <BoxComponent>두 번째 박스 입니다.</BoxComponent>
+      <Clock />
     </>
   );
 }
