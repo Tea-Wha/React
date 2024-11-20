@@ -14,12 +14,14 @@ import RadioButton from "./RadioButton";
 import TableMap from "./TableMap";
 import UserList from "./UserList";
 import ToDoList from "./ToDoList";
+import Print from "./연습문제1";
+import InfoEffect from "./InfoEffect";
 // 정수, boolean 값은 항상 객체로 전달해야 함
 
 function App() {
   return (
     <>
-      <ToDoList />
+      <InfoEffect />
     </>
   );
 }

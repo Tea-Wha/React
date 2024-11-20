@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 // id 값은 게시글 번호 -> 서버가 자동 생성하게끔
 // 렌더링을 최대한 줄여야함
 
@@ -14,6 +14,13 @@ const ToDoList = () => {
           {id: 4, text: "리액트 프로젝트"},
         ];
   });
+  // localStorage 저장 기능
+
+  useEffect(() => {
+    localStorage.setItem("names", JSON.stringify(names));
+  }, [names]);
+  // 값 유지 기능
+
   const [inputText, setInputText] = useState("");
   const [nextID, setNextID] = useState(5); // useState 제한이 필요함 (2-3개 까지는 괜찮음)
   const onChange = (e) => setInputText(e.target.value);
@@ -39,7 +46,12 @@ const ToDoList = () => {
         type="text"
         value={inputText}
         onChange={onChange}
-        onEnter={onClick}
+        //   onKeyDown={(e) => {
+        //     if (e.key === "Enter") {
+        //       onClick();
+        //     }
+        //   }
+        // }
       />
       <button onClick={onClick}>추가</button>
       <ul>
