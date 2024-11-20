@@ -55,6 +55,7 @@ const TableMap = () => {
     // 원하는 결과 얻을 수 있음 -> [ ] 사이에  추가적인 설정을 통해서
     setMemberData(responseData);
   }, []);
+
   const handleTableRowClick = (item) => {
     console.log(item);
   };
